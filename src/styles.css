@@ -1,1 +1,4 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* Themes, can be changed, just follow the path */
+@import "~@angular/material/core/theming/prebuilt/deeppurple-amber.css";

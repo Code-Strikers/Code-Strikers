@@ -1,7 +1,8 @@
 {
   "name": "code-strikers",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "license": "MIT",
+  "author": "Quentin Laplanche <quentin.laplanche@outlook.fr>",
   "angular-cli": {},
   "scripts": {
     "start": "ng serve",
@@ -17,10 +18,12 @@
     "@angular/core": "^2.1.0",
     "@angular/forms": "^2.1.0",
     "@angular/http": "^2.1.0",
+    "@angular/material": "^2.0.0-alpha.10",
     "@angular/platform-browser": "^2.1.0",
     "@angular/platform-browser-dynamic": "^2.1.0",
     "@angular/router": "^3.1.0",
     "core-js": "^2.4.1",
+    "hammerjs": "^2.0.8",
     "rxjs": "5.0.0-beta.12",
     "ts-helpers": "^1.1.1",
     "zone.js": "^0.6.23"

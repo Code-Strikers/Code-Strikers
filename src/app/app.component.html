@@ -1,28 +1,47 @@
-<md-sidenav-layout [class.m2app-dark]="isDarkTheme">
-
-  <md-sidenav #sidenav mode="side" class="app-sidenav">
-    Sidenav
-  </md-sidenav>
-
+<div>
   <md-toolbar color="primary">
-    <button class="app-icon-button" (click)="sidenav.toggle()">
-      <i class="material-icons app-toolbar-menu">menu</i>
-    </button>
-
-    Code Striker Presentation App
-
-    <span class="app-toolbar-filler"></span>
-    <button md-button (click)="isDarkTheme = !isDarkTheme">TOGGLE DARK THEME</button>
+    <span>
+      <md-icon class="icon-20">menu</md-icon>
+      Code-strikers
+      <button md-icon-button>
+        <md-icon>more_vert</md-icon>
+      </button>
+    </span>
   </md-toolbar>
+  <md-sidenav-layout>
+    <md-sidenav align="end" mode="side" #sidenav>
+      <md-tab-group>
+        <md-tab>
+          <template md-tab-label>Details</template>
+          <template md-tab-content>
+            <p>Name: {{currentPerson.name}} </p>
+            <p>Role: {{currentPerson.role}} </p>
+            <button md-raised-button (click)="sidenav.close()">CLOSE</button>
+          </template>
+        </md-tab>
+        <md-tab>
+          <template md-tab-label>Feed</template>
+          <template md-tab-content></template>
+        </md-tab>
+      </md-tab-group>
+    </md-sidenav>
+<button md-raised-button (click)="sidenav.toggle()">Toggle sidenav</button>
 
-  <div class="app-content">
+<md-grid-list cols="4" rowHeight="200px">
+  <md-grid-tile *ngFor="let person of persons" [rowspan]="person.rows">
+    <img src="assets/{{person.name}}.png" alt="photo of {{person.name}}">
+    <md-grid-tile-footer>
+      <h3 md-line> {{person.name}} </h3>
+      <span md-line> {{person.role}} </span>
+      <button md-icon-button (click)="showPerson(person)">
+        <md-icon>info</md-icon>
+      </button>
+    </md-grid-tile-footer>
+  </md-grid-tile>
+</md-grid-list>
 
-
-
-  </div>
-
-</md-sidenav-layout>
-
-<span class="app-action" [class.m2app-dark]="isDarkTheme">
-  <button md-fab><md-icon>check circle</md-icon></button>
-</span>
+  </md-sidenav-layout>
+</div>
+<md-tab-group>
+  <md-tab>content</md-tab>
+</md-tab-group>

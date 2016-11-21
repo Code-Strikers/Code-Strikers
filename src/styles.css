@@ -17,6 +17,11 @@ md-toolbar-row {
   justify-content: space-between;
 }
 
+img {
+	max-width: 100%;
+	height: auto;
+}
+
 p {
   margin: 16px;
 }

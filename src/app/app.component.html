@@ -1,19 +1,23 @@
 <div [class.dark-theme]="isDarkTheme">
   <md-toolbar color="primary">
-    <span>
-      <md-icon class="icon-20">gamepad</md-icon>
-      Code-strikers
-      <button md-icon-button [md-menu-trigger-for]="menu">
-        <md-icon>more_vert</md-icon>
-      </button>
-    </span>
+
+      <span>
+        <md-icon class="icon-20">gamepad</md-icon>
+        Code-strikers
+      </span>
+      <span class="fill-remaining-space"></span>
+      <span>
+        <button md-icon-button [md-menu-trigger-for]="menu">
+          <md-icon>more_vert</md-icon>
+        </button>
+      </span>
   </md-toolbar>
   <md-menu x-position="before" #menu="mdMenu">
     <button md-menu-item>Settings</button>
     <button md-menu-item (click)="isDarkTheme=!isDarkTheme">Toggle Theme</button>
     <button md-menu-item>Help</button>
   </md-menu>
-  <img src="assets/Logo.png" alt="Logo de la team Code Strikers">
+  <!-- <img src="assets/Logo.png" alt="Logo de la team Code Strikers"> -->
   <md-sidenav-layout>
     <md-sidenav align="end" mode="side" #sidenav>
       <md-tab-group>

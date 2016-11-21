@@ -13,8 +13,8 @@ body {
   font-family: Roboto, sans-serif;
 }
 
-md-toolbar-row {
-  justify-content: space-between;
+.fill-remaining-space {
+  flex: 1 1 auto;
 }
 
 img {

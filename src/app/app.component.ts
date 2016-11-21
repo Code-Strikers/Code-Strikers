@@ -12,12 +12,12 @@ export class AppComponent {
 
   persons = [
     {rows: 2, name: 'Quentin', role: 'Capitaine'},
-    {rows: 1, name: 'Jeremy', role: 'Front'},
+    {rows: 1, name: 'Jeremy', role: 'Frontend Developer'},
     {rows: 1, name: 'Constantin', role: 'Unknown'},
-    {rows: 2, name: 'Guillaume', role: 'Unknown'},
-    {rows: 1, name: 'Meryem', role: 'Unknown'},
+    {rows: 2, name: 'Guillaume', role: 'Relations Internationales'},
+    {rows: 1, name: 'Meryem', role: 'Frontend Developer'},
     {rows: 2, name: 'Louis', role: 'Unknown'},
-    {rows: 1, name: 'Thierry-Philippe', role: 'Unknown'},
+    {rows: 1, name: 'Thierry-Philippe', role: 'Backend'},
     {rows: 2, name: 'David', role: 'Cafe'},
     {rows: 2, name: 'Camille', role: 'Unknown'},
     {rows: 1, name: 'Than', role: 'Unknown'}

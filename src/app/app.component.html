@@ -1,31 +1,34 @@
-<div>
+<div [class.dark-theme]="isDarkTheme">
   <md-toolbar color="primary">
     <span>
-      <md-icon class="icon-20">menu</md-icon>
+      <md-icon class="icon-20">gamepad</md-icon>
       Code-strikers
-      <button md-icon-button>
+      <button md-icon-button [md-menu-trigger-for]="menu">
         <md-icon>more_vert</md-icon>
       </button>
     </span>
   </md-toolbar>
+  <md-menu x-position="before" #menu="mdMenu">
+    <button md-menu-item>Settings</button>
+    <button md-menu-item (click)="isDarkTheme=!isDarkTheme">Toggle Theme</button>
+    <button md-menu-item>Help</button>
+  </md-menu>
   <md-sidenav-layout>
     <md-sidenav align="end" mode="side" #sidenav>
       <md-tab-group>
         <md-tab>
           <template md-tab-label>Details</template>
-          <template md-tab-content>
             <p>Name: {{currentPerson.name}} </p>
             <p>Role: {{currentPerson.role}} </p>
             <button md-raised-button (click)="sidenav.close()">CLOSE</button>
-          </template>
         </md-tab>
-        <md-tab>
+        <!-- <md-tab>
           <template md-tab-label>Feed</template>
           <template md-tab-content></template>
-        </md-tab>
+        </md-tab> -->
       </md-tab-group>
     </md-sidenav>
-<button md-raised-button (click)="sidenav.toggle()">Toggle sidenav</button>
+<!-- <button md-raised-button (click)="sidenav.toggle()">Toggle sidenav</button> -->
 
 <md-grid-list cols="4" rowHeight="200px">
   <md-grid-tile *ngFor="let person of persons" [rowspan]="person.rows">
@@ -42,6 +45,3 @@
 
   </md-sidenav-layout>
 </div>
-<md-tab-group>
-  <md-tab>content</md-tab>
-</md-tab-group>

@@ -18,8 +18,9 @@
       <md-tab-group>
         <md-tab>
           <template md-tab-label>Details</template>
-            <p>Name: {{currentPerson.name}} </p>
+            <p>Nom: {{currentPerson.name}} </p>
             <p>Role: {{currentPerson.role}} </p>
+            <p>Citation: <i>"{{currentPerson.citation}}"</i> </p>
             <button md-raised-button (click)="sidenav.close()" color="accent">CLOSE</button>
         </md-tab>
         <!-- <md-tab>

@@ -8,19 +8,19 @@ import { MdSidenav } from '@angular/material';
 })
 export class AppComponent {
   isDarkTheme: boolean = false;
-  title = 'app works!';
 
   persons = [
-    {rows: 2, name: 'Quentin', role: 'Capitaine'},
-    {rows: 1, name: 'Jeremy', role: 'Frontend Developer'},
-    {rows: 1, name: 'Constantin', role: 'Unknown'},
-    {rows: 2, name: 'Guillaume', role: 'Relations Internationales'},
-    {rows: 1, name: 'Meryem', role: 'Frontend Developer'},
-    {rows: 2, name: 'Louis', role: 'Unknown'},
-    {rows: 1, name: 'Thierry-Philippe', role: 'Backend'},
-    {rows: 2, name: 'David', role: 'Cafe'},
-    {rows: 2, name: 'Camille', role: 'Unknown'},
-    {rows: 1, name: 'Than', role: 'Unknown'}
+    {rows: 2, name: 'Quentin', role: 'Capitaine',
+      citation:  'Il n\'y a que deux sortes de langages de programmation: ceux dont les gens disent toujours du mal et ceux que personne n\'utilise.'},
+    {rows: 1, name: 'Jeremy', role: 'Frontend Developer', citation: ''},
+    {rows: 1, name: 'Constantin', role: 'Relations Internationales', citation: ''},
+    {rows: 2, name: 'Guillaume', role: 'Backend Developer', citation: ''},
+    {rows: 1, name: 'Louis', role: 'Frontend Developer', citation: ''},
+    {rows: 2, name: 'Meryem', role: 'Frontend Developer', citation: ''},
+    {rows: 1, name: 'Thierry-Philippe', role: 'Backend', citation: ''},
+    {rows: 2, name: 'David', role: 'Cafe - Frontend Developer à temps partiel', citation: ''},
+    {rows: 2, name: 'Camille', role: 'Unknown', citation: ''},
+    {rows: 1, name: 'Than', role: 'Unknown', citation: ''}
   ];
   @ViewChild('sidenav') sidenav: MdSidenav;
   currentPerson = {};

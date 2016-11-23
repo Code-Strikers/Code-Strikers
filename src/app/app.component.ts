@@ -17,7 +17,7 @@ export class AppComponent {
     {rows: 2, name: 'Guillaume', role: 'Backend Developer', citation: ''},
     {rows: 1, name: 'Louis', role: 'Frontend Developer', citation: ''},
     {rows: 2, name: 'Meryem', role: 'Frontend Developer', citation: ''},
-    {rows: 1, name: 'Thierry-Philippe', role: 'Backend Developer', citation: ''},
+    {rows: 1, name: 'Thierry-Philippe', role: 'Backend Developer', citation: 'Dans le doute, Tu reboot'},
     {rows: 2, name: 'David', role: 'Café - Frontend Developer à temps partiel', citation: ''},
     {rows: 2, name: 'Camille', role: 'Backend Developer', citation: ''},
     {rows: 1, name: 'Than', role: 'Unknown', citation: ''}

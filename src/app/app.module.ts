@@ -6,10 +6,12 @@ import { HttpModule } from '@angular/http';
 import { MaterialModule } from '@angular/material';
 
 import { AppComponent } from './app.component';
+import { TeamGridComponent } from './team-grid/team-grid.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TeamGridComponent
   ],
   imports: [
     BrowserModule,

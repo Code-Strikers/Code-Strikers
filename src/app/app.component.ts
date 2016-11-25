@@ -1,5 +1,4 @@
-import { Component, ViewChild } from '@angular/core';
-import { MdSidenav } from '@angular/material';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,7 +6,6 @@ import { MdSidenav } from '@angular/material';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  isDarkTheme: boolean = false;
-
+isDarkTheme: boolean = false;
 
 }

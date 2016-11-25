@@ -17,37 +17,5 @@
     <button md-menu-item (click)="isDarkTheme=!isDarkTheme">Toggle Theme</button>
     <button md-menu-item>Help</button>
   </md-menu>
-  <!-- <img src="assets/Logo.png" alt="Logo de la team Code Strikers"> -->
-  <md-sidenav-layout>
-    <md-sidenav align="end" mode="side" #sidenav>
-      <md-tab-group>
-        <md-tab>
-          <template md-tab-label>Details</template>
-            <p>Nom: {{currentPerson.name}} </p>
-            <p>Role: {{currentPerson.role}} </p>
-            <p>Citation: <i>"{{currentPerson.citation}}"</i> </p>
-            <button md-raised-button (click)="sidenav.close()" color="accent">CLOSE</button>
-        </md-tab>
-        <!-- <md-tab>
-          <template md-tab-label>Feed</template>
-          <template md-tab-content></template>
-        </md-tab> -->
-      </md-tab-group>
-    </md-sidenav>
-<!-- <button md-raised-button (click)="sidenav.toggle()">Toggle sidenav</button> -->
-
-<md-grid-list cols="4" rowHeight="200px">
-  <md-grid-tile *ngFor="let person of persons" [rowspan]="person.rows">
-    <img src="assets/{{person.name}}.png" alt="photo of {{person.name}}">
-    <md-grid-tile-footer>
-      <h3 md-line> {{person.name}} </h3>
-      <span md-line> {{person.role}} </span>
-      <button md-icon-button (click)="showPerson(person)">
-        <md-icon>info</md-icon>
-      </button>
-    </md-grid-tile-footer>
-  </md-grid-tile>
-</md-grid-list>
-
-  </md-sidenav-layout>
 </div>
+<router-outlet></router-outlet>

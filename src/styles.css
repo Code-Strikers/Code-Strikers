@@ -17,17 +17,8 @@ body {
   flex: 1 1 auto;
 }
 
-img {
-	max-width: 100%;
-	height: auto;
-}
-
 p {
   margin: 16px;
-}
-
-[md-raised-button] {
-  width: 100%;
 }
 
 md-grid-list {

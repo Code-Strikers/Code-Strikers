@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ShareButton, ShareProvider} from "ng2-sharebuttons";
 
 @Component({
   selector: 'app-home',

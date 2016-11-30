@@ -10,6 +10,8 @@ import { AppComponent } from './app.component';
 import { TeamGridComponent } from './team-grid/team-grid.component';
 import { HomeComponent } from './home/home.component';
 
+import {ShareButtonsModule} from 'ng2-sharebuttons';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +23,8 @@ import { HomeComponent } from './home/home.component';
     FormsModule,
     HttpModule,
     MaterialModule.forRoot(),
-    AppRoutingModule
+    AppRoutingModule,
+    ShareButtonsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

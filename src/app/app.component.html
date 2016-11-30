@@ -2,10 +2,21 @@
   <md-toolbar color="primary">
 
       <span>
-        <md-icon class="icon-20">gamepad</md-icon>
+        <button md-icon-button [routerLink]="['/']">
+          <md-icon class="icon-20">gamepad</md-icon>
+        </button>
         Code-strikers
       </span>
       <span class="fill-remaining-space"></span>
+      <button md-icon-button *ngIf="music.paused" (click)="music.play()">
+        <md-icon>play_arrow</md-icon>
+      </button>
+      <button md-icon-button *ngIf="!music.paused" (click)="music.pause()">
+        <md-icon>pause</md-icon>
+      </button>
+      <audio autoplay loop #music>
+        <source src="assets/brodyquest.mp3" type="audio/mpeg">
+      </audio>
       <button md-icon-button [routerLink]="['/team']">
         <md-icon>dashboard</md-icon>
       </button>

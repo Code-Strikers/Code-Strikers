@@ -10,4 +10,5 @@ img {
 .container {
   text-align: center;
   background-color: black;
+  background-image: image("assets/CodeStrikers-logo.png");
 }

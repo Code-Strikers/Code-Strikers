@@ -1,4 +1,4 @@
-<div>
+<div class="container">
   <md-sidenav-layout>
     <md-sidenav align="end" mode="side" #sidenav>
       <md-tab-group>
@@ -17,7 +17,7 @@
     </md-sidenav>
 <!-- <button md-raised-button (click)="sidenav.toggle()">Toggle sidenav</button> -->
 
-    <md-grid-list cols="4" rowHeight="200px">
+    <md-grid-list cols="4" rowHeight="175px">
       <md-grid-tile *ngFor="let person of persons" [rowspan]="person.rows">
         <img src="assets/{{person.name}}.png" alt="photo of {{person.name}}">
         <md-grid-tile-footer>

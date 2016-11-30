@@ -6,7 +6,8 @@
   "angular-cli": {},
   "scripts": {
     "start": "ng serve --aot",
-    "prod": "ng build --prod --aot",
+    "dev": "ng serve",
+    "prod": "ng build --base-href /sites/codestrikers --prod --aot",
     "lint": "tslint \"src/**/*.ts\"",
     "test": "ng test",
     "pree2e": "webdriver-manager update",

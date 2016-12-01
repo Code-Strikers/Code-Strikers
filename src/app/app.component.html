@@ -1,28 +1,35 @@
-<md-sidenav-layout [class.m2app-dark]="isDarkTheme">
-
-  <md-sidenav #sidenav mode="side" class="app-sidenav">
-    Sidenav
-  </md-sidenav>
-
+<div [class.dark-theme]="isDarkTheme">
   <md-toolbar color="primary">
-    <button class="app-icon-button" (click)="sidenav.toggle()">
-      <i class="material-icons app-toolbar-menu">menu</i>
-    </button>
 
-    Code Striker Presentation App
-
-    <span class="app-toolbar-filler"></span>
-    <button md-button (click)="isDarkTheme = !isDarkTheme">TOGGLE DARK THEME</button>
+      <span>
+        <button md-icon-button [routerLink]="['/']">
+          <md-icon class="icon-20">gamepad</md-icon>
+        </button>
+        Code-strikers
+      </span>
+      <span class="fill-remaining-space"></span>
+      <button md-icon-button *ngIf="music.paused" (click)="music.play()">
+        <md-icon>play_arrow</md-icon>
+      </button>
+      <button md-icon-button *ngIf="!music.paused" (click)="music.pause()">
+        <md-icon>pause</md-icon>
+      </button>
+      <audio autoplay loop #music>
+        <source src="assets/brodyquest.mp3" type="audio/mpeg">
+      </audio>
+      <button md-icon-button [routerLink]="['/team']">
+        <md-icon>dashboard</md-icon>
+      </button>
+      <span>
+        <button md-icon-button [md-menu-trigger-for]="menu">
+          <md-icon>more_vert</md-icon>
+        </button>
+      </span>
   </md-toolbar>
-
-  <div class="app-content">
-
-
-
-  </div>
-
-</md-sidenav-layout>
-
-<span class="app-action" [class.m2app-dark]="isDarkTheme">
-  <button md-fab><md-icon>check circle</md-icon></button>
-</span>
+  <md-menu x-position="before" #menu="mdMenu">
+    <button md-menu-item>Settings</button>
+    <button md-menu-item (click)="isDarkTheme=!isDarkTheme">Toggle Theme</button>
+    <button md-menu-item>Help</button>
+  </md-menu>
+</div>
+<router-outlet></router-outlet>

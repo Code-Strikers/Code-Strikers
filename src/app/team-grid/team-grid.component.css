@@ -1,0 +1,14 @@
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+[md-raised-button] {
+  width: 100%;
+}
+
+.container {
+  text-align: center;
+  background-color: black;
+  background-image: image("assets/CodeStrikers-logo.png");
+}
